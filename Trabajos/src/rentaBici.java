@@ -55,23 +55,22 @@ public class rentaBici {
                 System.exit(0);
             }
             subTotal=tarifa*hora;
-            if(subTotal>0){
-                if (membrecia){
-                    System.out.println("Tienes el 20% de descuento ");
-                    descuento=subTotal*descuento;
-                    total=subTotal-descuento;
-                    System.out.println("Subtotal: $"+subTotal);
-                    System.out.println("Descuento: $"+ descuento);
-                    System.out.println("Total a pagar: $"+total);
-                }
-                else{
-                    System.out.println("No tienes descuento");
-                    total=subTotal;
-                    System.out.println("Subtotal: $"+subTotal);
-                    System.out.println("Descuento: No aplica");
-                    System.out.println("Total a pagar: $"+total);
-                }
+            if (membrecia){
+                System.out.println("Tienes el 20% de descuento ");
+                descuento=subTotal*descuento;
+                total=subTotal-descuento;
+                System.out.println("Subtotal: $"+subTotal);
+                System.out.println("Descuento: $"+ descuento);
+                System.out.println("Total a pagar: $"+total);
             }
+            else{
+                System.out.println("No tienes descuento");
+                total=subTotal;
+                System.out.println("Subtotal: $"+subTotal);
+                System.out.println("Descuento: No aplica");
+                System.out.println("Total a pagar: $"+total);
+            }
+
         } else if(hora==0) {
                  System.out.println("No puedes rentar 0 horas");
         }else {
